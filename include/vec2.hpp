@@ -3,18 +3,14 @@
 
 #include <fstream>
 #include <SFML/System/Vector2.hpp>
-#include "saveable.hpp"
 #include "imgui.h"
 
 namespace alg
 {
-    class vec2 : public ini::saveable
+    class vec2
     {
     public:
         float x = 0.f, y = 0.f;
-
-        void write(ini::output &out) const override;
-        void read(ini::input &in) override;
 
         vec2() = default;
         vec2(float x, float y);
