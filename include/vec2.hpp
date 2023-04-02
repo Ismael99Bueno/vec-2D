@@ -2,8 +2,12 @@
 #define VEC2_HPP
 
 #include <fstream>
-#include <SFML/System/Vector2.hpp>
-#include "imgui.h"
+#define VEC2_AS(vec)     \
+    {                    \
+        (vec).x, (vec).y \
+    }
+
+#define AS_VEC2(vec) alg::vec2((vec).x, (vec).y)
 
 namespace alg
 {
@@ -14,7 +18,6 @@ namespace alg
 
         vec2() = default;
         vec2(float x, float y);
-        vec2(const sf::Vector2f &v2);
 
         float sum() const;
         float dot(const vec2 &v) const;
@@ -39,9 +42,6 @@ namespace alg
         static vec2 triple_cross(const vec2 &v1, const vec2 &v2, const vec2 &v3);
 
         const static vec2 zero, one, unit, left, right, down, up;
-
-        operator sf::Vector2f() const;
-        operator ImVec2() const;
     };
 
     vec2 operator+(const vec2 &v);

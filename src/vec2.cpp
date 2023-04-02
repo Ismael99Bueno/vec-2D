@@ -5,8 +5,6 @@ namespace alg
 {
     vec2::vec2(const float x, const float y) : x(x), y(y) {}
 
-    vec2::vec2(const sf::Vector2f &v2) : x(v2.x), y(v2.y) {}
-
     float vec2::sum() const { return x + y; }
 
     float vec2::dot(const vec2 &v) const { return x * v.x + y * v.y; }
@@ -50,9 +48,6 @@ namespace alg
     const vec2 vec2::right = {1.f, 0.f};
     const vec2 vec2::down = {0.f, -1.f};
     const vec2 vec2::up = {0.f, 1.f};
-
-    vec2::operator sf::Vector2f() const { return sf::Vector2f(x, y); }
-    vec2::operator ImVec2() const { return ImVec2(x, y); }
 
     vec2 operator+(const vec2 &v) { return v; }
 

@@ -9,4 +9,4 @@ project "vec-2D"
 
    files {"src/**.cpp", "include/**.hpp"}
 
-   includedirs "../**/include"
+   includedirs "include"
