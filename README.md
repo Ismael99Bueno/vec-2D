@@ -10,7 +10,7 @@ vec-2D is a simple 2D vector implementation that provides common vector operatio
 
 ## Usage
 
-To use vec-2D, simply include the vec2.hpp header in your project. This is the only necessary header to include.
+To use vec-2D, simply include the `vec2.hpp` header in your project. This is the only necessary header to include.
 
 vec-2D is built using premake5 as a static library. To use it, you must create a premake5 workspace that includes the vec-2D library. You can then build the workspace with premake5 to create an executable.
 
